@@ -1,1 +1,1 @@
-# README.md file for littlelemon course captone
+# README.md file for littlelemon course capstone
