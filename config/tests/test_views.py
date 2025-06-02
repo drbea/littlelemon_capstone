@@ -17,14 +17,12 @@ class MenuViewTest(TestCase):
     def test_getall(self):
         client = APIClient()
 
-        res = self.client.get(reverse("LittlelemonAPI:menu-items"))
+        res = self.client.get(reverse("menu-items"))
         menus = Menu.objects.all()
         serializer = MenuItemSerializer(menus, many = True)
 
         print(f"\n\n res: {res}\n menus:{menus}\n serializer: {serializer}")
         self.assertEqual(res.status_code, 200)
-#        self.assertContains(res.data, serializer.data)
+        self.assertEqual(res.data, serializer.data)
 
 
-if __name__ == "__main__":
-    MenuViewTest.test_getall()

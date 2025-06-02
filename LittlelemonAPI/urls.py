@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 from rest_framework.authtoken.views import obtain_auth_token
-app_name = "LittlelemonAPI"
+#app_name = "LittlelemonAPI"
 
 urlpatterns = [
 	path("menu-items", views.MenuItemsView.as_view(), name = "menu-items"),
