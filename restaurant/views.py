@@ -18,19 +18,14 @@ def index(request):
 class MenuItemsView(generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuItemSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
 
 class SingleMenuItemView(generics.RetrieveUpdateAPIView, generics.DestroyAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuItemSerializer
+    permission_classes = [permissions.IsAuthenticated]
 
-# class MenuItemView(viewsets.ModelViewSet):
-
-#     queryset = Menu.objects.all()
-#     serializer_class = MenuItemSerializer
-
-#     # ordering_fields = ["price", "inventory"]
-#     # search_fields = ["title", "category__name"]
-#     # throttling_classes = [AnonRateThrottle, TenCallsPerMinute]
 
 
 class BookingView(viewsets.ModelViewSet):

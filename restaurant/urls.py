@@ -3,6 +3,8 @@ from rest_framework.routers import DefaultRouter
 
 from . import views
 
+app_name = "restaurant"
+
 router = DefaultRouter()
 # router.register(r"menu-item", views.MenuItemView, basename = "menu-item")
 router.register(r"tables", views.BookingView)
@@ -10,7 +12,7 @@ router.register(r"tables", views.BookingView)
 urlpatterns = [
     path("booking/", include(router.urls)),
 
-    path('menu/', views.MenuItemsView.as_view()),
+    path('menu/', views.MenuItemsView.as_view(), name = "menu-items"),
     path('menu/<int:pk>', views.SingleMenuItemView.as_view()),
     
     path("hello", views.sayHello),
