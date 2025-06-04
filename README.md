@@ -1,4 +1,5 @@
 # README.md file for littlelemon course capstone
+# Before anything here you need to be athenticated
 
 ## Home page for Littlelemon
 - http://localhost:8000/restaurant/

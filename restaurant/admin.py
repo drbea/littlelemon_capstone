@@ -8,6 +8,7 @@ from . models import Booking, Menu
 class BookingAdmin(admin.ModelAdmin):
 	pass
 
+
 @admin.register(Menu)
 class MenuAdmin(admin.ModelAdmin):
 	pass
